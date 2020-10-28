@@ -58,13 +58,19 @@ header img{
 
 footer{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     background-color: #333;
     color: #DDD;
     text-align: center;
     font-size: 18px;
     margin-top: 1%;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 #social-media{
@@ -75,10 +81,16 @@ footer{
 }
 
 #copyright{
-    padding-left: 5%;
+    padding-top: 1%;
+    padding-left: 3%;
+
 }
 
-.padding-footer{
-    display: flex;
-    flex-direction: column;
+#footer-adress{
+    padding-top: 2%;
+}
+
+#footer-ref{
+    padding-left: 5%;
+    padding-top: 2.5%;
 }
