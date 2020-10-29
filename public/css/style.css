@@ -236,11 +236,11 @@ video {
 
 #about_us{
     margin: auto;
-    width: 60%;
+    width: 80%;
     padding: 10px;
 }
 
-#about_us p{
+.first_part p{
     text-align: justify;
     text-justify: inter-word;
     height: auto;
@@ -250,10 +250,11 @@ video {
 
 }
 
-#mission{
+#mission-about{
     text-align: center;
     padding: 2%;
-    font-size: 250%;
+    font-size: 22px;
+    padding: 2% 0;
 }
 
 .first_part{
@@ -261,7 +262,7 @@ video {
 }
 
 .first_part img{
-    width: 60%;
+    width: 40%;
     height: auto;
 }
 
@@ -273,4 +274,24 @@ video {
 .text_below{
     margin-top: 2%;
     margin-right:0%;
+}
+
+.subtitle{
+    font-size: 16px;
+}
+.team{
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+}
+
+.team p{
+    text-align: justify;
+    text-justify: inter-word;
+    width: 96%;
+    height: auto;
+    padding:0 2%;
+    line-height: 1.7;
+    color: #777;
+    font-size: 17px;
 }
