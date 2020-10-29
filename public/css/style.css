@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
 *{
     margin: 0%;
+    font-family: 'Fira Sans', sans-serif;
 }
 
 header{
@@ -64,7 +67,6 @@ footer{
     color: #DDD;
     text-align: center;
     font-size: 18px;
-    margin-top: 1%;
 }
 
 .row{
@@ -81,9 +83,8 @@ footer{
 }
 
 #copyright{
-    padding-top: 1%;
+    padding-top:1% ;
     padding-left: 3%;
-
 }
 
 #footer-adress{
@@ -99,7 +100,7 @@ footer{
 	max-width:400px;
 	width:100%;
 	margin:0 auto;
-	position:relative;
+    position:relative;
 }
 
 #contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
@@ -140,7 +141,7 @@ fieldset {
 #contact textarea {
 	height:100px;
     max-width:100%;
-  resize:none;
+    resize:none;
 }
 
 #contact button[type="submit"] {
@@ -162,4 +163,60 @@ fieldset {
 .center-box{
     margin:10% 10%;
     font-size: 26px;
+}
+
+#community-portal{
+    display: flex;
+    flex-direction: column;
+}
+
+#kit{
+    width: 50%;
+    height: auto;
+}
+
+#kit2{
+    width: 40%;
+    height: auto;
+}
+
+.adjust{
+    padding: 3% 10%;
+}
+
+.description{
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}
+
+.description p{
+    text-align: justify;
+    text-justify: inter-word;
+    width: 96%;
+    height: auto;
+    padding:0 2%;
+    line-height: 1.7;
+    color: #777;
+    font-size: 17px;
+}
+.containerImg{
+    width: 100%;
+    margin: auto;
+}
+
+#street{
+    width: 100%;
+    height: auto;
+}
+
+.containerVideo{
+    margin: auto;
+    width: 60%;
+    padding: 3% 0 0 0;
+}
+
+video {
+    width: 100%;
+    height: auto;
 }
