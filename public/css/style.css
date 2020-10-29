@@ -220,3 +220,46 @@ video {
     width: 100%;
     height: auto;
 }
+
+/* About us Page*/
+
+#about_us{
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}
+
+#about_us p{
+    text-align: justify;
+    text-justify: inter-word;
+    height: auto;
+    line-height: 1.8;
+    color: #777;
+    font-size: 17px;
+
+}
+
+#mission{
+    text-align: center;
+    padding: 2%;
+    font-size: 250%;
+}
+
+.first_part{
+    display: flex;
+}
+
+.first_part img{
+    width: 60%;
+    height: auto;
+}
+
+.first_part p{
+    padding: 0 2%;
+    width: 96%;
+
+}
+.text_below{
+    margin-top: 2%;
+    margin-right:0%;
+}
