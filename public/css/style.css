@@ -163,6 +163,7 @@ fieldset {
     margin: auto;
     padding: 10px;
     font-size: 20px;
+    text-align: center;
 }
 
 #community-portal{
@@ -294,4 +295,15 @@ video {
     line-height: 1.7;
     color: #777;
     font-size: 17px;
+}
+
+.team-picture{
+    width: 30%;
+    height: auto;
+}
+
+.team img{
+    width: 20%;
+    height: auto;
+
 }
