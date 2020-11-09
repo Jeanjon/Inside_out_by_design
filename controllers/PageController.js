@@ -15,3 +15,8 @@ module.exports.Contact =  function(request, response) {
     response.title = "Contact - Inside Out by design";
     response.render('contact', response);
 };
+
+module.exports.Sign =  function(request, response) {
+    response.title = "Sign In - Inside Out by design";
+    response.render('sign-in-up', response);
+};

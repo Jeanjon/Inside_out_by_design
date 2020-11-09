@@ -7,4 +7,6 @@ module.exports = function(app) {
     app.get('/about-us', PageController.About);
 
     app.get('/contact', PageController.Contact);
+
+    app.get('/sign-in-up', PageController.Sign);
 };
