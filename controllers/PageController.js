@@ -29,6 +29,25 @@ module.exports.Login =  function(request, response) {
     });
 };
 
+module.exports.CreateAccount =  function(request, response) {
+    response.title = "Home - Inside Out by design";
+
+    let login = request.body;
+
+    model.CreateAccount(login, function (err, result) {
+        if (err) {
+            console.log(err);
+            return;
+        }
+
+        request.session.email = login.email;
+        request.session.name = login.name;
+        request.session.surname = login.surname;
+        
+        response.render('home', response);
+    });
+};
+
 module.exports.About =  function(request, response) {
     response.title = "About us - Inside Out by design";
     response.render('about-us', response);
@@ -44,9 +63,13 @@ module.exports.Sign =  function(request, response) {
     response.render('sign-in-up', response);
 };
 
+module.exports.SignUp =  function(request, response) {
+    response.title = "Sign Up - Inside Out by design";
+    response.render('sign-up', response);
+};
+
 module.exports.LogOut =  function(request, response) {
     response.title = "Home - Inside Out by design";
-
 
     request.session.email = false;
     request.session.name = false;

@@ -10,6 +10,8 @@ module.exports = function(app) {
     app.get('/contact', PageController.Contact);
 
     app.get('/sign-in-up', PageController.Sign);
+    app.get('/sign-up', PageController.SignUp);
+    app.post('/sign-up', PageController.CreateAccount);
 
     app.get('/log-out', PageController.LogOut);
 };

@@ -12,3 +12,15 @@ module.exports.Connexion = function(data, callback) {
         }
     })
 }
+
+module.exports.CreateAccount = function(data, callback) {
+    db.getConnection(function(err, connection) {
+        if (!err) {
+            let sql = "INSERT INTO users VALUES ('"+ data.email+"','"+data.pwd+"','"+data.name+"','"+data.surname+"')";
+            console.log(sql);
+            connection.query(sql, callback);
+
+            connection.release();
+        }
+    })
+}
