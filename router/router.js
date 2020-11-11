@@ -8,6 +8,8 @@ module.exports = function(app) {
 
     app.get('/contact', PageController.Contact);
 
+    app.get('/forums', PageController.Forums)
+
     app.get('/sign-in-up', PageController.Sign);
     app.post('/sign-in',PageController.Login);
     app.get('/sign-up', PageController.SignUp);

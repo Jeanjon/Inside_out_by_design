@@ -77,3 +77,8 @@ module.exports.LogOut =  function(request, response) {
         
     response.render('home', response);
 };
+
+module.exports.Forums = function(request, response){
+    response.title = "Forums - Inside Out by design";
+    response.render('forums', response);
+}
