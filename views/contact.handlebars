@@ -14,10 +14,10 @@
             <h3>Contact Us Now</h3>
             <br>
             <fieldset>
-                <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+                <input placeholder="Your name" {{#if session.name}} value="{{session.name}} {{session.surname}}" {{/if}} type="text" tabindex="1" required autofocus>
             </fieldset>
             <fieldset>
-                <input placeholder="Your Email Address" type="email" tabindex="2" required>
+                <input placeholder="Your Email Address" {{#if session.email}} value="{{session.email}}" {{/if}} type="email" tabindex="2" required>
             </fieldset>
             <fieldset>
                 <textarea placeholder="Type your Message Here...." tabindex="5" required></textarea>
