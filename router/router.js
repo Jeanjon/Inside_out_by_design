@@ -11,6 +11,7 @@ module.exports = function(app) {
     app.get('/forums', PageController.Forums)
 
     app.get('/forum-message/:num', PageController.Message)
+    app.post('/forum-message/:num', PageController.SendingMessage)
 
     app.get('/sign-in-up', PageController.Sign);
     app.post('/sign-in',PageController.Login);

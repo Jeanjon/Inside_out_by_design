@@ -48,3 +48,15 @@ module.exports.getMessage= function (data,callback) {
         }
     })
 }
+
+module.exports.saveMessage= function (message,data,author,callback) {
+    db.getConnection(function(err, connection) {
+        if (!err) {
+            let sql = "insert into forum_message values ('"+message+"','"+author+"',"+data+", NOW())" ;
+            console.log(sql);
+            connection.query(sql, callback);
+
+            connection.release();
+        }
+    })
+}

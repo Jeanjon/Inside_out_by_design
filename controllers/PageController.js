@@ -1,5 +1,6 @@
 let model = require('../models/model.js');
 let async = require('async');
+const { cachedDataVersionTag } = require('v8');
 
 
 module.exports.Home =  function(request, response) {
@@ -115,6 +116,26 @@ module.exports.Message = function(request, response){
             console.log(result);
             
             response.render('forum-message', response);
+        });
+    } else{
+        response.redirect('/sign-in-up');
+
+    }
+}
+
+module.exports.SendingMessage = function(request, response){
+    response.title = "Forums - Inside Out by design";
+    let data = request.params.num;
+    let message = request.body.message;
+    let author = request.session.name + " " + request.session.surname
+    if (request.session.email) {
+        model.saveMessage(message,data,author, function (err, result) {
+            if (err) {
+                console.log(err);
+                return;
+            }
+            
+            response.redirect('/forum-message/' + data);
         });
     } else{
         response.redirect('/sign-in-up');
