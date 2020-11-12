@@ -10,6 +10,8 @@ module.exports = function(app) {
 
     app.get('/forums', PageController.Forums)
 
+    app.get('/forum-message/:num', PageController.Message)
+
     app.get('/sign-in-up', PageController.Sign);
     app.post('/sign-in',PageController.Login);
     app.get('/sign-up', PageController.SignUp);

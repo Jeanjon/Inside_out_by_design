@@ -321,21 +321,65 @@ table{
 
 }
 table tr th {
-        background-color: #333;
-        color:#DDD;
-        padding:2%;
+    background-color: #333;
+    color:#DDD;
+    padding:2%;
 }
+
+.topic{
+    cursor:pointer;
+}
+
 .topic td{
     padding: 2%;
 }
 
 .topic:nth-child(odd){
     text-align: center;
-    
     background-color: rgba(252, 197, 96, 0.986);
 }
+
 .topic:nth-child(even){
     text-align: center;
-    ;
-    background-color: orange     ;
+    background-color: orange;
 }
+
+.message{
+    background-color: orange;
+    margin: 3%;
+    padding: 2%;
+}
+
+#sendMessage{
+    display: flex;
+    flex-direction: row;
+}
+#sendMessage textarea{
+    width:80%;
+	border:1px solid #CCC;
+	background:#FFF;
+	margin: 3%;
+    padding: 2%;
+    resize: none;
+    height: 60px;
+}
+
+.relative{
+    position: relative;
+}
+
+#sendMessage button{
+    background-color: orange;
+    font-size: 16px;
+    cursor: pointer;
+    margin: auto;
+    border: none;
+    padding: 16px;
+    /* Center vertically and horizontally */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -10px;
+}
+
+

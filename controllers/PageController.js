@@ -25,7 +25,7 @@ module.exports.Login =  function(request, response) {
             request.session.surname = users.surname;
         }
         
-        response.render('home', response);
+        response.redirect('/');
     });
 };
 
@@ -44,7 +44,7 @@ module.exports.CreateAccount =  function(request, response) {
         request.session.name = login.name;
         request.session.surname = login.surname;
         
-        response.render('home', response);
+        response.redirect('/');
     });
 };
 
@@ -75,10 +75,49 @@ module.exports.LogOut =  function(request, response) {
     request.session.name = false;
     request.session.surname = false;
         
-    response.render('home', response);
+    response.redirect('/');
 };
 
 module.exports.Forums = function(request, response){
     response.title = "Forums - Inside Out by design";
-    response.render('forums', response);
+
+    if (request.session.email) {
+        model.getTopic( function (err, result) {
+            if (err) {
+                console.log(err);
+                return;
+            }
+    
+            response.topic = result;
+    
+            console.log(result);
+            
+            response.render('forums', response);
+        });
+    } else{
+        response.redirect('/sign-in-up');
+    }
+    
+}
+
+module.exports.Message = function(request, response){
+    response.title = "Forums - Inside Out by design";
+    let data = request.params.num;
+    if (request.session.email) {
+        model.getMessage(data, function (err, result) {
+            if (err) {
+                console.log(err);
+                return;
+            }
+
+            response.message = result;
+
+            console.log(result);
+            
+            response.render('forum-message', response);
+        });
+    } else{
+        response.redirect('/sign-in-up');
+
+    }
 }

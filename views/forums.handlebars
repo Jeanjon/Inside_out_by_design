@@ -6,17 +6,23 @@
     <th>Author</th>
     <th>Last update</th>
   </tr>
-  <tr class="topic">
-      <td>Generale</td>
-      <td>Clément</td>
-      <td>10/11/2020</td>
+  {{#each topic}}
+  <tr class="topic" id="{{this.id}}">
+      <td>{{this.topic}}</td>
+      <td>{{this.creator}}</td>
+      <td>{{formatDate this.datepost 'DD/MM/YYYY'}}</td>
   </tr>
-   <tr class="topic">
-      <td>Generale</td>
-      <td>Clément</td>
-      <td>10/11/2020</td>
-  </tr>
+  {{/each}}
 </table>
 
-
 </section>
+
+<script>
+  let topic = document.getElementsByClassName("topic");
+  for (var i = 0 ; i < topic.length; i++) {
+    let id = topic[i].id
+    topic[i].addEventListener('click' ,function(){
+      window.location.href = '/forum-message/' + id;
+    });
+  }
+</script>
