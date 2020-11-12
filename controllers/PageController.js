@@ -82,7 +82,6 @@ module.exports.LogOut =  function(request, response) {
 module.exports.Forums = function(request, response){
     response.title = "Forums - Inside Out by design";
 
-    if (request.session.email) {
         model.getTopic( function (err, result) {
             if (err) {
                 console.log(err);
@@ -95,16 +94,12 @@ module.exports.Forums = function(request, response){
             
             response.render('forums', response);
         });
-    } else{
-        response.redirect('/sign-in-up');
-    }
     
 }
 
 module.exports.Message = function(request, response){
     response.title = "Forums - Inside Out by design";
     let data = request.params.num;
-    if (request.session.email) {
         model.getMessage(data, function (err, result) {
             if (err) {
                 console.log(err);
@@ -117,10 +112,6 @@ module.exports.Message = function(request, response){
             
             response.render('forum-message', response);
         });
-    } else{
-        response.redirect('/sign-in-up');
-
-    }
 }
 
 module.exports.SendingMessage = function(request, response){
